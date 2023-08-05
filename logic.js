@@ -6,24 +6,23 @@
 // // console.log(t)
 // // }
 
-// //palindrome number check
-// // Path: logic.js
-// function palindrome(num){
-//     var rem,temp,final=0;
-//     temp=num;
-//     while(num>0){
-//         rem=num%10;
-//         num=parseInt(num/10);
-//         final=final*10+rem;
-//     }
-//     if(final==temp){
-//         console.log("The inputed number is Palindrome");
-//     }
-//     else{
-//         console.log("The inputted number is not palindrome");
-//     }
-// }
-// palindrome(121);
+//palindrome number check
+function palindrome(num){
+    var rem,temp,final=0;
+    temp=num;
+    while(num>0){
+        rem=num%10;
+        num=parseInt(num/10);
+        final=final*10+rem;
+    }
+    if(final==temp){
+        console.log("The inputed number is Palindrome");
+    }
+    else{
+        console.log("The inputted number is not palindrome");
+    }
+}
+palindrome(121);
 
 
 
@@ -77,15 +76,15 @@
 
 
 
-// // reverse of steing
-// function reverse(str){
-//     var reverse='';
-//     for(i=str.length-1;i>=0;i--){
-//         reverse=reverse+str[i];
-//     }
-//     console.log(reverse);
-// }
-// reverse('abhishek gupta');
+// reverse of steing
+function reverse(str){
+    var reverse='';
+    for(i=str.length-1;i>=0;i--){
+        reverse=reverse+str[i];
+    }
+    console.log(reverse);
+}
+reverse('abhishek gupta');
 
 
 // 6. WAP to find the given string is Palindrome or not.
@@ -105,53 +104,52 @@
 
 
 //second largest element in the array
-function findseclargestel(arr){
-    let secondlargest= Number
-    let largest = arr[0] 
-    for(let i = 1; i < arr.length; i++){
-        if(arr[i]>largest){
-            secondlargest=largest
-            largest=arr[i]
-        }
-        else if(arr[i]<largest && arr[i]>secondlargest){
-            secondlargest=arr[i]
-            console.log('sec');
-        }
+// function findseclargestel(arr){
+//     let secondlargest= Number
+//     let largest = arr[0] 
+//     for(let i = 1; i < arr.length; i++){
+//         if(arr[i]>largest){
+//             secondlargest=largest
+//             largest=arr[i]
+//         }
+//         else if(arr[i]<largest && arr[i]>secondlargest){
+//             secondlargest=arr[i]
+//             console.log('sec');
+//         }
         
-    }
-    return secondlargest
-}
- const arrr=[12, 35, 1, 10, 34, 1, 35]
- findseclargestel(arrr)
-console.log('*********************\n',findseclargestel(arrr));
-
-
-
-// function dubel(arr){
-//     sorted=arr.sort()
-//     console.log(sorted);
-//     newarr=[]
-
-//     for(i=0,j=i+1;i<arr.length-1;i++,j++){
-//         // console.log(sorted[i],'i');
-//         // console.log(sorted[j],'j');
-//         if(sorted[i]==sorted[j]){
-//             newarr.push(sorted[i])
-//         }
-//         else{
-//             if(newarr.includes(sorted[j])){
-
-//             }
-//             else{
-//                 newarr.push(sorted[j])
-//             }
-//         }
 //     }
-//     return newarr
+//     return secondlargest
 // }
-// let arr=[12, 35, 1, 10, 34, 1, 35]
-// dubel(arr)
-// console.log(dubel(arr));
+//  const arrr=[12, 35, 1, 10, 34, 1, 35]
+//  findseclargestel(arrr)
+// console.log('*********************\n',findseclargestel(arrr));
+
+
+
+function dubel(arr){
+    sorted=arr.sort()
+    console.log(sorted);
+    newarr=[]
+
+    for(i=0,j=i+1;i<arr.length-1;i++,j++){
+
+        if(sorted[i]==sorted[j]){
+            newarr.push(sorted[i])
+        }
+        else{
+            if(newarr.includes(sorted[j])){
+
+            }
+            else{
+                newarr.push(sorted[j])
+            }
+        }
+    }
+    return newarr
+}
+let arr=[12, 35, 1, 10, 34, 1, 35]
+dubel(arr)
+console.log(dubel(arr));
 
 
 
@@ -389,3 +387,97 @@ console.log('*********************\n',findseclargestel(arrr));
 // }
 // number(1234);
 // console.log(number(1234));
+
+
+
+// str0='Engineer'
+// str=str0.toLowerCase()
+// str2=''
+// for(i=0;i<str.length;i++){
+//     var count =0
+//     for(j=0;j<str.length;j++){
+//         if(str[i]===str[j]){
+//             count++;
+//         }
+//     }
+//     if(!str2.includes(str[i])){
+//         str2+=str[i]+count
+//     }
+// }
+// console.log(str2);
+// console.log(str);
+
+// var str = "";
+// function charcount(str) {
+
+//     var input = str.toLowerCase();
+//     var output = "";
+
+//     for (var i = 0; i < input.length; i++) {
+//         var count = 0;
+//         for (var j = 0; j < input.length; j++) {
+//             if (input[i] === input[j]) {
+//                 count++;
+//             }
+//         }
+//         if (!output.includes(input[i])) {
+//             output += input[i] + count;
+//         }
+//     }
+//     return output
+// }
+// console.log(charcount('Engineer'));
+
+
+// n = 100; 
+// primeNumbers = [];
+
+// for (var i = 2; i <= n; i++) {
+//   isPrime = true;
+//   for (var j = 2; j < i; j++) {
+//     if (i % j === 0) {
+//       isPrime = false;
+//       break;
+//     }
+//   }
+//   if (isPrime) {
+//     primeNumbers.push(i);
+//   }
+// }
+// console.log(primeNumbers);
+// n=0
+// while(n<=100){
+//     console.log(n);
+// n++
+// }
+
+
+// function squareRoot(number) {
+//     if (number < 0) {
+//       return "Invalid input. Cannot calculate square root of a negative number.";
+//     }
+  
+//     return Math.sqrt(number);
+//   }
+//     console.log(squareRoot(16));
+//   console.log(squareRoot(-9));
+  
+
+//   function groupAnagrams(str) {
+//     const map = new Map();
+  
+//     for (let i = 0; i < str.length; i++) {
+//       const sortedStr = str[i].split("").sort().join("");
+//       if (map.has(sortedStr)) {
+//         map.get(sortedStr).push(str[i]);
+//       } else {
+//         map.set(sortedStr, [str[i]]);
+//       }
+//     }
+  
+//     return Array.from(map.values());
+//   }
+  
+//   const str = ["eat", "tea", "tan", "ate", "nat", "bat"];
+//   console.log(groupAnagrams(str));  //tried but failed
+  
